@@ -2,9 +2,22 @@ import TextReact from "./components/TextReact.jsx";
 
 function App() {
     return (
-        <section>
-            <TextReact />
-        </section>
+        <main>
+            {/* HEADER */}
+            <header>
+                HEADER
+            </header>
+
+            {/* item-list */}
+            <section className="item-list">
+                <TextReact />
+            </section>
+
+            {/* FOOTER */}
+            <footer>
+                FOOTER
+            </footer>
+        </main>
     );
 }
 
