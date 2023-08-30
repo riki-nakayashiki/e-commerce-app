@@ -18,25 +18,13 @@ export default function ItemList() {
       });
   }, []);
 
-  // console.log(itemList);
-
   return (
     <section className="item-list">
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
-      {/* {itemList.map((item) => {
-        console.log(item[1]);
-        return <p key={item.productName}>{item.productName}</p>;
-      })} */}
+      {itemList.map((item) => {
+        if (item[0] !== "productId") {
+          return <ItemCard key={item[0]} item={item} />;
+        }
+      })}
     </section>
   );
 }
-
-// let items = [
-//   { productName: "Reebok Men trackpant- male Track Pants", price: 900 },
-//   { productName: "Nike Men Air Zoom Century Shoes", price: 111 },
-//   { productName: "Inkfruit Men Night Wolf T-shirt", price: 222 },
-// ];
