@@ -24,12 +24,12 @@ async function readCsvFile(file) {
         input
             .pipe(parse({ delimiter: ',' }))
             .on('data', function(dataRow) {
-                console.log(dataRow);
+                // console.log(dataRow);
                 results.push(dataRow);
             })
             .on('end', function() {
-                console.log('Read CSV: ');
-                console.log(results);
+                // console.log('Read CSV: ');
+                // console.log(results);
                 resolve(results);
             })
             .on('error', function(error) {

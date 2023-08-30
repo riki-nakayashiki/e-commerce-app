@@ -10,7 +10,7 @@ function App() {
             {/* HEADER */}
             <Header /> 
             {/* item-list */}
-            <section className="item-list">
+            <section>
                 <ItemList />
             </section>
             <TempComp />

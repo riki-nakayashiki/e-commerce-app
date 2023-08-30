@@ -15,6 +15,13 @@ module.exports = {
                     loader: 'babel-loader', // Use Babel for .js and .jsx files
                 },
             },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
         ],
     },
     plugins: [

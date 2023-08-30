@@ -1,0 +1,38 @@
+.item-list {
+  padding: 1vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.item-list .item-card {
+  width: 30vw;
+  background-color: #D8D9DA;
+  font-size: 12px;
+}
+.item-list .item-card figure {
+  height: 100%;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1vw;
+}
+.item-list .item-card figcaption {
+  width: 90%;
+}
+.item-list .item-card img {
+  width: 20vw;
+  height: 20vw;
+  object-fit: contain;
+}
+.item-list .item-card .item-category {
+  border-radius: 3px;
+  padding: 3px;
+  width: fit-content;
+  background-color: #61677A;
+  color: white;
+}
+.item-list .item-card .item-name {
+  font-weight: 600;
+}
