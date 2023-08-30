@@ -16,7 +16,8 @@ function App() {
                 {/* <ItemList /> */}
             </section>
 
-            <TempComp />
+            <Cart />
+            {/* <TempComp /> */}
 
             {/* FOOTER */}
             <footer>

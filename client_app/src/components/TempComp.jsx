@@ -5,13 +5,15 @@ import { useState, useEffect } from "react";
 export default function PersonList() {
   
   const [dataArr, setData] = useState([]);
+  const [headerArr, setHeader] = useState([]);
 
   // Using AXIOS
   useEffect(() => {
     axios.get("http://localhost:8081/data")
         .then(function (response) {
             // console.log(response.data);
-            setData(response.data[2])
+            setData(response.data)
+            setHeader(response.data[0])
           })
           .catch(function (error) {
             console.log(error);
@@ -25,13 +27,25 @@ export default function PersonList() {
   //   .then((data) => setData(data));
   // }, []);
 
-  console.log(dataArr[2]);
+
+  // Making response data to JSON Object
+  const jsonObj = [];
+  for(let i = 1; i < dataArr.length; i++) {
+    const obj = {};
+    for(let j = 0; j < headerArr.length; j++) {
+      obj[headerArr[j]] = dataArr[i][j];
+    }
+    jsonObj.push(obj);
+  }
+  JSON.stringify(jsonObj);
+
+  console.log(jsonObj);
 
   return (
     <ul>
       {
-        dataArr.map((data) =>
-            {return <li key={data.username}>{data.username}</li>}
+        jsonObj.map((data) =>
+            {return <li key={data.productName}>{data.productName}</li>}
         )
       }
     </ul>

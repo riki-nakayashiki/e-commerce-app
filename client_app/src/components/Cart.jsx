@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from "react";
-import './Cart.css'
 
 export default function Cart() {
     const [dataArr, setData] = useState([{image: "", price: 0}]);
@@ -23,7 +22,7 @@ export default function Cart() {
     if(dataArr.length > 0) {
         const priceArr = []
         for(let i=0; i<dataArr.length; i++) {
-            priceArr.push(dataArr[i].price)
+            priceArr.push(Number(dataArr[i].price))
         }
         totalPrice = priceArr.reduce((total, num)=>{
             return total + num;
@@ -32,7 +31,7 @@ export default function Cart() {
             
     return (
         <section className="cart">
-            <h2>CART</h2>
+            <h3>CART</h3>
             <ul>
                 {
                     dataArr.map((data) =>
@@ -42,11 +41,12 @@ export default function Cart() {
                                 <figcaption>
                                     <p>{data.productName}</p>
                                     <p>$ {data.price}</p>
-                                    <label htmlFor="quantity">
-                                        <input type="number" name="quantity" id="quantity" value="1" />
-                                        <button id="changeQuantity">Change Quantity</button>
-                                    </label>
-                                    <button id="deleteItem">Delete</button>
+                                    <div className='cart-quantity'>
+                                        <label htmlFor="quantity">quantity</label>
+                                        <input type="number" name="quantity" id="quantity" defaultValue="1" />
+                                        <button id="changeQuantity">Change</button>
+                                    </div>
+                                    <button id="deleteItem"><i class="fa-solid fa-trash-can"></i></button>
                                 </figcaption>
                             </figure>
                         </li> }
