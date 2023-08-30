@@ -1,4 +1,4 @@
-export default function TextReact() {
+export default function ItemList() {
   return (
     <section>
       <h1>Hello</h1>

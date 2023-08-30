@@ -1,4 +1,4 @@
-import TextReact from "./components/TextReact.jsx";
+import ItemList from "./components/item-list/ItemList.jsx";
 
 function App() {
     return (
@@ -10,7 +10,7 @@ function App() {
 
             {/* item-list */}
             <section className="item-list">
-                <TextReact />
+                <ItemList />
             </section>
 
             {/* FOOTER */}
