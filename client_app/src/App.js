@@ -1,4 +1,5 @@
 import ItemList from "./components/item-list/ItemList.jsx";
+import TempComp from "./components/TempComp.jsx";
 
 function App() {
     return (
@@ -12,6 +13,8 @@ function App() {
             <section className="item-list">
                 <ItemList />
             </section>
+
+            <TempComp />
 
             {/* FOOTER */}
             <footer>
