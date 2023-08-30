@@ -1,0 +1,32 @@
+.detail {
+    display: flex;
+    justify-content: center;
+    column-gap: 5vw;
+    padding: 10%;
+    height: 40vh;
+}
+.product-img {
+    width: 40%;
+}
+.product-detail {
+    width: 40%;
+    text-align: left;
+}
+.product-detail small {
+    background-color: rgb(216,217,218);
+    color: white;
+    text-transform: uppercase;
+    padding: 1%;
+}
+.product-detail button {
+    margin-top: 5vh;
+    background-color: rgb(39,40,41);
+    color: white;
+    width: 100%;
+    height: 5vh;
+    border-radius: 3vw;
+    font-weight: 600;
+}
+.product-img img{
+    height: 100%;
+}
