@@ -5,19 +5,33 @@ import { useState, useEffect } from "react";
 
 function Detail(){
     const [dataArr, setData] = useState([]);
-    
+    const [headerArr, setHeader] = useState([]);
+
     // Using AXIOS
     useEffect(() => {
         axios.get("http://localhost:8081/data")
             .then(function (response) {
                 // console.log(response.data);
-                setData(response.data[1])
+                 setData(response.data)
+                 setHeader(response.data[0])
             })
             .catch(function (error) {
                 console.log(error);
             })
     }, []);
-    console.log(dataArr);
+
+    // Making response data to JSON Object
+  const jsonObj = [];
+  for(let i = 1; i < dataArr.length; i++) {
+    const obj = {};
+    for(let j = 0; j < headerArr.length; j++) {
+      obj[headerArr[j]] = dataArr[i][j];
+    }
+    jsonObj.push(obj);
+  }
+  JSON.stringify(jsonObj);
+
+  console.log(jsonObj);
 
     return(
         <div className='detail'>
