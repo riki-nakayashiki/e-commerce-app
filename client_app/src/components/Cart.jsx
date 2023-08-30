@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import './Cart.css'
 
 export default function Cart() {
-    const [dataArr, setData] = useState([]);
+    const [dataArr, setData] = useState([{image: "", price: 0}]);
 
     useEffect(() => {
         axios.get("http://localhost:8081/cart")
@@ -16,6 +16,8 @@ export default function Cart() {
                 console.log(error);
               })
     }, []);
+
+    console.log(dataArr[0].price)
             
     let totalPrice; 
     if(dataArr.length > 0) {
