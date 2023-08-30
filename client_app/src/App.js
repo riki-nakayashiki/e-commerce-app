@@ -1,5 +1,5 @@
 import ItemList from "./components/item-list/ItemList.jsx";
-import TempComp from "./components/TempComp.jsx";
+import Cart from "./components/Cart.jsx";
 
 function App() {
     return (
@@ -14,7 +14,7 @@ function App() {
                 <ItemList />
             </section>
 
-            <TempComp />
+            <Cart />
 
             {/* FOOTER */}
             <footer>

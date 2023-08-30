@@ -55,6 +55,18 @@ app.get('/data', async (req, res) => {
     }
 });
 
+// cart
+app.get('/cart', async (req, res) => {
+    try {
+    // For JSON
+      const jsonData = await fs.promises.readFile('./data/cart.json');
+      const data = JSON.parse(jsonData);
+      res.json(data);
+    } catch (error) {
+      console.error('Error loading events:', error);
+    }
+});
+
 
 // LISTEN
 app.listen(port, (err)=>{
