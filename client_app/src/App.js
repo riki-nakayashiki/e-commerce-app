@@ -1,5 +1,8 @@
 import ItemList from "./components/item-list/ItemList.jsx";
 import TempComp from "./components/TempComp.jsx";
+import {Routes, Route} from 'react-router-dom';
+
+import Detail from './components/detail.js';
 
 function App() {
     return (
@@ -16,6 +19,9 @@ function App() {
 
             <TempComp />
 
+            <Routes>
+                <Route path="/detail" element={<Detail />}></Route>
+            </Routes>
             {/* FOOTER */}
             <footer>
                 FOOTER
@@ -23,5 +29,15 @@ function App() {
         </main>
     );
 }
+// function App() {
+//     return (
+//       <div className="App">
+//         <Routes>
+//             <Route path='/detail' element={<Detail />}></Route>
+//         </Routes>
+
+//       </div>
+//     );
+//   }
 
 export default App;``

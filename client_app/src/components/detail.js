@@ -1,7 +1,24 @@
 import '../style/detail.css';
+import React from 'react';
+import axios from 'axios';
+import { useState, useEffect } from "react";
 
 function Detail(){
+    const [dataArr, setData] = useState([]);
     
+    // Using AXIOS
+    useEffect(() => {
+        axios.get("http://localhost:8081/data")
+            .then(function (response) {
+                // console.log(response.data);
+                setData(response.data[1])
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }, []);
+    console.log(dataArr);
+
     return(
         <div className='detail'>
             <div className='product-img'>
