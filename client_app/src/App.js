@@ -1,3 +1,4 @@
+import './style/styles.css'
 import ItemList from "./components/item-list/ItemList.jsx";
 import TempComp from "./components/TempComp.jsx";
 
@@ -10,7 +11,7 @@ function App() {
             </header>
 
             {/* item-list */}
-            <section className="item-list">
+            <section>
                 <ItemList />
             </section>
 
