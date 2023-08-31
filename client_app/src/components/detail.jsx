@@ -1,8 +1,13 @@
+import Header from '../components/Header.jsx';
+/* import Slider from '../components/Slider.jsx'; */
 import '../style/detail.css';
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
+import Footer from '../components/Footer.jsx';
+
+
 
 export default function Detail(){
     const [jsonObj, setData] = useState([]);
@@ -25,7 +30,7 @@ export default function Detail(){
 
 if (jsonObj.length > 0) {
     return(
-
+        
         <div className='detail'>
             <div className='product-img'>
                 <img src={jsonObj[id].image}></img>
