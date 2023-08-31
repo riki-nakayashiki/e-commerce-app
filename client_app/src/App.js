@@ -2,7 +2,7 @@ import ItemList from "./components/item-list/ItemList.jsx";
 import TempComp from "./components/TempComp.jsx";
 import {Routes, Route} from 'react-router-dom';
 
-import Detail from './components/detail.js';
+import Detail from './components/detail.jsx';
 
 function App() {
     return (
@@ -17,10 +17,10 @@ function App() {
                 <ItemList />
             </section>
 
-            <TempComp />
+            {/* <TempComp /> */}
 
             <Routes>
-                <Route path="/detail" element={<Detail />}></Route>
+                <Route path="/detail/:id" element={<Detail/>}></Route>
             </Routes>
             {/* FOOTER */}
             <footer>

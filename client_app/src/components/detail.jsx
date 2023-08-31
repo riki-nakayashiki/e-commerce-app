@@ -2,10 +2,12 @@ import '../style/detail.css';
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from "react";
+import {useParams} from 'react-router-dom';
 
-function Detail(){
+export default function Detail(){
     const [dataArr, setData] = useState([]);
     const [headerArr, setHeader] = useState([]);
+    const {id} = useParams();
 
     // Using AXIOS
     useEffect(() => {
@@ -31,23 +33,24 @@ function Detail(){
   }
   JSON.stringify(jsonObj);
 
-  console.log(jsonObj);
-
+if (jsonObj.length > 0) {
     return(
         <div className='detail'>
             <div className='product-img'>
-                <img src="http://assets.myntassets.com/v1/images/style/properties/7b661983ddd630db69f2847a53e25704_images.jpg"></img>
+                <img src={jsonObj[id].image}></img>
             </div>
             <div className='product-detail'>
-                <small>Topwear</small>
-                <h2>(name)Reebok Women Boat-Neck Wildberry Sweatshirt</h2>
-                <p>(type)Sweatshirts</p>
-                <p>(price)$344</p>
-                <p>(color)Pink</p>
+                <small>{jsonObj[id].category}</small>
+                <h2>{jsonObj[id].productName}</h2>
+                <p>{jsonObj[id].type}</p>
+                <p>{jsonObj[id].price}</p>
+                <p>{jsonObj[id].baseColor}</p>
 
                 <button>Add to Cart</button>
-            </div>           
+            </div>
         </div>
     )
 }
-export default Detail;
+
+   
+}

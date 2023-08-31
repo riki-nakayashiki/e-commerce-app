@@ -3,10 +3,12 @@
     justify-content: center;
     column-gap: 5vw;
     padding: 10%;
-    height: 40vh;
+    height: 100vh;
 }
 .product-img {
     width: 40%;
+    display: flex;
+    justify-content: center;
 }
 .product-detail {
     width: 40%;
