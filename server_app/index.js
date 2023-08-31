@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const { parse } = require("csv-parse");
+const bodyParser = require('body-parser');
 const fs = require('fs');
 
 
@@ -14,6 +15,15 @@ const port = 8081;
 app.use(cors({
     origin: 'http://localhost:8080'
 }));
+
+// app.options('/', (req,res) => {
+//     res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+//     res.header('Access-Control-Allow-Methods', 'GET, POST');
+//     res.sendStatus(200);
+// });
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 // Read CSV file
@@ -73,6 +83,41 @@ app.get('/cart', async (req, res) => {
       const jsonData = await fs.promises.readFile('./data/cart.json');
       const data = JSON.parse(jsonData);
       res.json(data);
+    } catch (error) {
+      console.error('Error loading events:', error);
+    }
+});
+
+app.post('/cart', async (req, res) => {
+    const newItem = req.body;
+    try {
+        console.log("CHECK RESPONSE--------------------: ",newItem)
+        const jsonData = await fs.promises.readFile('./data/cart.json');
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+        const data = JSON.parse(jsonData);
+        data.push(newItem)
+        await fs.promises.writeFile('./data/cart.json', JSON.stringify(data));
+        res.json(newItem);
+    } catch (error) {
+      console.error('Error loading events:', error);
+    }
+});
+
+app.delete('/cart', async (req, res) => {
+    const deleteData = req.body;
+    try {
+        // console.log("CHECK RESPONSE--------------------: ",deleteData)
+        const jsonData = await fs.promises.readFile('./data/cart.json');
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+        const data = JSON.parse(jsonData);
+        // const index = data.indexOf(deleteData);
+        // data.splice(index, 1)
+        let filtered = data.filter(function(data) { 
+            return data.productId !== deleteData.productId;  
+        });
+        console.log("FILTER---------------",filtered)
+        await fs.promises.writeFile('./data/cart.json', JSON.stringify(filtered));
+        // res.json(newItem);
     } catch (error) {
       console.error('Error loading events:', error);
     }

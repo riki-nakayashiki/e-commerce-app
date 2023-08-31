@@ -16,7 +16,6 @@ export default function Home() {
             <Items />
         </section>
 
-        {/* <TempComp /> */}
            {/* FOOTER */}
            <Footer/>
         </main>

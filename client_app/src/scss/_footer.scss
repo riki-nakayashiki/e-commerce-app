@@ -1,0 +1,29 @@
+.footer {
+    background-color: $color1;
+    color: $color3;
+    padding: 40px 0;
+    @include FlexCenter;
+    flex-direction: column;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    color: $colorPoint;
+    font-size: 1.25rem;
+    transition: color 0.3s;
+  }
+  
+  .icon:hover {
+    color: white;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+  
+  

@@ -1,0 +1,107 @@
+/* CART STYLE */
+
+.cart {
+    width: fit-content;
+    height: 100%;
+    @include FlexColumn(30px);
+    padding: 4%;
+    position: absolute;
+    right: -500px;
+    top: var(--header);
+    background-color: #1d1d1d;
+    color: white;
+    z-index: 999;
+    opacity: 0.8;
+    animation-name: cartAni;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    @keyframes cartAni {
+        from {right: -500px; opacity: 0.8;}
+        to {right: 0; opacity: 1;}
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        position: relative;
+    }
+    
+    --cartImg: 140px;
+    figure {
+        display: grid;
+        grid-template-columns: var(--cartImg) 1fr;
+        gap: 10px;
+    }
+
+    img {
+        width: var(--cartImg);
+        height: var(--cartImg);
+        object-fit: cover;
+        border: 1px solid black;
+    }
+
+    figcaption {
+        @include FlexColumn();
+        justify-content: space-around;
+    }
+
+    span {
+        font-weight: 700;
+    }
+
+    .cart-quantity {
+        @include FlexRow();
+        align-items: center;
+    }
+
+    label {
+        width: 100%;
+        color: $color2;
+    }
+
+    input {
+        background-color: $color3;
+        border: none;
+        margin-left: 20px;
+        // border: 1px solid $color3;
+        width: 100px;
+        padding: 10px;
+    }
+
+    #changeQuantity {
+        border: none;
+        background-color: $color2;
+        color: $color3;
+        padding: 10px;
+    }
+
+    #deleteItem {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 0.3em;
+    }
+
+    &>p {
+        font-size: 1.3em;
+        text-align: right;
+        border-top: 1px solid white;
+        padding: 2%;
+
+        span {
+            color: $color2;
+            margin-right: 20px;
+        }
+    }
+
+    &>button {
+        // background-color: white;
+        padding: 4%;
+    }
+}

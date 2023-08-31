@@ -1,4 +1,4 @@
-import '../style/detail.css';
+// import '../style/detail.css';
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from "react";
@@ -22,8 +22,28 @@ export default function Detail(){
             })
     }, []);
 
-    // Making response data to JSON Object
-  console.log(jsonObj[id]);
+    const addItem = (data) => {
+
+        fetch('http://localhost:8081/cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        })
+        .then(response => {
+        console.log("response", response);
+        })
+        .then(data => {
+        console.log("Check Data",data);
+        })
+        .catch(error => {
+        console.error('Error adding todo:', error);
+        });
+
+        window.location.reload()
+        alert("ADDED!")
+    }
 
 if (jsonObj.length > 0) {
     return(
@@ -40,7 +60,7 @@ if (jsonObj.length > 0) {
                     <p >PRICE : ${jsonObj[id].price}</p>
                     <p>COLOR : {jsonObj[id].baseColor}</p>
 
-                    <button>Add to Cart</button>
+                    <button onClick={() => addItem(jsonObj[id])}>Add to Cart</button>
                 </div>
              </div>
              <Footer/>

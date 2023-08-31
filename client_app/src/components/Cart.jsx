@@ -8,15 +8,12 @@ export default function Cart() {
     useEffect(() => {
         axios.get("http://localhost:8081/cart")
             .then(function (response) {
-                console.log(response.data);
                 setData(response.data)
               })
               .catch(function (error) {
                 console.log(error);
               })
     }, []);
-
-    console.log(dataArr[0].price)
             
     let totalPrice; 
     if(dataArr.length > 0) {
@@ -28,10 +25,31 @@ export default function Cart() {
             return total + num;
         })
     }
+
+    const deleteItem = (data) => {
+
+        fetch('http://localhost:8081/cart', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        })
+        .then(response => {
+        console.log("response", response);
+        })
+        .then(data => {
+        console.log("Check Data",data);
+        })
+        .catch(error => {
+        console.error('Error adding todo:', error);
+        });
+
+        window.location.reload()
+    }
             
     return (
         <section className="cart">
-            <h3>CART</h3>
             <ul>
                 {
                     dataArr.map((data) =>
@@ -39,21 +57,24 @@ export default function Cart() {
                             <figure>
                                 <img src={data.image} alt={data.productName} />
                                 <figcaption>
-                                    <p>{data.productName}</p>
-                                    <p>$ {data.price}</p>
+                                    <div>
+                                        <p>{data.productName}</p>
+                                        <span>$ {data.price}</span>
+                                    </div>
                                     <div className='cart-quantity'>
                                         <label htmlFor="quantity">quantity</label>
                                         <input type="number" name="quantity" id="quantity" defaultValue="1" />
                                         <button id="changeQuantity">Change</button>
                                     </div>
-                                    <button id="deleteItem"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button id="deleteItem" onClick={() => deleteItem(data)}><i class="fa-solid fa-trash-can"></i></button>
                                 </figcaption>
                             </figure>
                         </li> }
                     )
                 }
             </ul>
-            <p>TOTAL: $ {totalPrice}</p>
+            <p><span>TOTAL</span> $ {totalPrice}</p>
+            <button className='btn btn-primary'>Checkout</button>
       </section>
     );
 }
