@@ -8,7 +8,6 @@ export default function Cart() {
     useEffect(() => {
         axios.get("http://localhost:8081/cart")
             .then(function (response) {
-                // console.log(response.data);
                 setData(response.data)
               })
               .catch(function (error) {
@@ -28,14 +27,6 @@ export default function Cart() {
     }
 
     const deleteItem = (data) => {
-        // console.log(dataArr.indexOf(data))
-        console.log(data)
-
-        // axios.delete("http://localhost:8081/cart", data)
-        //     .then(res => {
-        //         console.log(res);
-        //         console.log(res.data);
-        //     })
 
         fetch('http://localhost:8081/cart', {
         method: 'DELETE',

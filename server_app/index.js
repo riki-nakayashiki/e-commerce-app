@@ -95,7 +95,6 @@ app.post('/cart', async (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
         const data = JSON.parse(jsonData);
         data.push(newItem)
-        // data.splice(0, 1)
         await fs.promises.writeFile('./data/cart.json', JSON.stringify(data));
         res.json(newItem);
     } catch (error) {
