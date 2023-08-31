@@ -1,4 +1,5 @@
 import React from 'react';
+/* import {Routes, Route} from 'react-router-dom'; */
 import Header from './components/Header.jsx';
 import Slider from "./components/Slider.jsx";
 import ItemList from "./components/item-list/ItemList.jsx";
