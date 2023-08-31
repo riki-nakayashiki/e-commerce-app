@@ -17,13 +17,13 @@
 .item-list .item-card img {
   width: 20vw;
   height: 20vw;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 * {
   margin: 0;
   padding: 0;
+  color: black;
 }
 
 li {
@@ -60,14 +60,12 @@ button {
 .cart img {
   width: 150px;
   height: 150px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border: 1px solid black;
 }
 .cart .cart-quantity {
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   align-items: center;
 }
 .cart input {
@@ -90,4 +88,4 @@ button {
 }
 .cart p {
   margin-bottom: 0.3em;
-}/*# sourceMappingURL=styles.css.map */
+}

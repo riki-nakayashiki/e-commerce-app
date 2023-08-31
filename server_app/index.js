@@ -48,8 +48,18 @@ app.get('/data', async (req, res) => {
 
     // For CSV
       const data = await readCsvFile('./data/products.csv');
-      
-      res.json(data);
+
+      const jsonObj = [];
+        for(let i = 1; i < data.length; i++) {
+            const obj = {};
+            for(let j = 0; j < data.length; j++) {
+            obj[data[0][j]] = data[i][j];
+            }
+            jsonObj.push(obj);
+        }
+        JSON.stringify(jsonObj);
+      console.log("DATA: ",data)
+      res.json(jsonObj);
     } catch (error) {
       console.error('Error loading events:', error);
     }
