@@ -1,5 +1,6 @@
 import './style/styles.css'
 import ItemList from "./components/item-list/ItemList.jsx";
+import Cart from "./components/Cart.jsx";
 import TempComp from "./components/TempComp.jsx";
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
 
             {/* item-list */}
             <section>
-                <ItemList />
+                {/* <ItemList /> */}
             </section>
 
+            {/* <Cart /> */}
             <TempComp />
 
             {/* FOOTER */}

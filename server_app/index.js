@@ -48,7 +48,29 @@ app.get('/data', async (req, res) => {
 
     // For CSV
       const data = await readCsvFile('./data/products.csv');
-      
+
+      const jsonObj = [];
+        for(let i = 1; i < data.length; i++) {
+            const obj = {};
+            for(let j = 0; j < data.length; j++) {
+            obj[data[0][j]] = data[i][j];
+            }
+            jsonObj.push(obj);
+        }
+        JSON.stringify(jsonObj);
+      console.log("DATA: ",data)
+      res.json(jsonObj);
+    } catch (error) {
+      console.error('Error loading events:', error);
+    }
+});
+
+// cart
+app.get('/cart', async (req, res) => {
+    try {
+    // For JSON
+      const jsonData = await fs.promises.readFile('./data/cart.json');
+      const data = JSON.parse(jsonData);
       res.json(data);
     } catch (error) {
       console.error('Error loading events:', error);
