@@ -6,9 +6,8 @@ const Slider = () => {
 
   useEffect(() => {
     const fetchedImages = [
-      'image-url-1.jpg',
-      'image-url-2.jpg',
-      'image-url-3.jpg'
+      '../images/img-1.png',
+      '../images/img-2.png'
     ];
     setImages(fetchedImages);
   }, []);
