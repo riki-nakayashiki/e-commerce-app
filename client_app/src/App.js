@@ -16,10 +16,10 @@ function App() {
 
             {/* item-list */}
             <section>
-                <ItemList />
+                {/* <ItemList /> */}
             </section>
 
-            <TempComp />
+            {/* <TempComp /> */}
 
             <Routes>
                 <Route path="/detail/:id" element={<Detail/>}></Route>

@@ -33,9 +33,9 @@ if (jsonObj.length > 0) {
             <div className='product-detail'>
                 <small>{jsonObj[id].category}</small>
                 <h2>{jsonObj[id].productName}</h2>
-                <p>{jsonObj[id].type}</p>
-                <p>{jsonObj[id].price}</p>
-                <p>{jsonObj[id].baseColor}</p>
+                <p>TYPE : {jsonObj[id].type}</p>
+                <p >PRICE : ${jsonObj[id].price}</p>
+                <p>COLOR : {jsonObj[id].baseColor}</p>
 
                 <button>Add to Cart</button>
             </div>
