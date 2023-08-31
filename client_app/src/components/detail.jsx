@@ -5,8 +5,7 @@ import { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
 
 export default function Detail(){
-    const [dataArr, setData] = useState([]);
-    const [headerArr, setHeader] = useState([]);
+    const [jsonObj, setData] = useState([]);
     const {id} = useParams();
 
     // Using AXIOS
@@ -15,7 +14,6 @@ export default function Detail(){
             .then(function (response) {
                 // console.log(response.data);
                  setData(response.data)
-                 setHeader(response.data[0])
             })
             .catch(function (error) {
                 console.log(error);
@@ -23,18 +21,11 @@ export default function Detail(){
     }, []);
 
     // Making response data to JSON Object
-  const jsonObj = [];
-  for(let i = 1; i < dataArr.length; i++) {
-    const obj = {};
-    for(let j = 0; j < headerArr.length; j++) {
-      obj[headerArr[j]] = dataArr[i][j];
-    }
-    jsonObj.push(obj);
-  }
-  JSON.stringify(jsonObj);
+  console.log(jsonObj[id]);
 
 if (jsonObj.length > 0) {
     return(
+
         <div className='detail'>
             <div className='product-img'>
                 <img src={jsonObj[id].image}></img>
