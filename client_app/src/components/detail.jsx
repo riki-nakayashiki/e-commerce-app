@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
 import Header from "./Header.jsx";
-import Footer from "./FooterComponent.jsx";
+import Footer from "./Footer.jsx";
 
 export default function Detail(){
     const [jsonObj, setData] = useState([]);
