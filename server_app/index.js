@@ -52,13 +52,13 @@ app.get('/data', async (req, res) => {
       const jsonObj = [];
         for(let i = 1; i < data.length; i++) {
             const obj = {};
-            for(let j = 0; j < data.length; j++) {
+            for(let j = 0; j < data.length+1; j++) {
             obj[data[0][j]] = data[i][j];
             }
             jsonObj.push(obj);
         }
         JSON.stringify(jsonObj);
-      console.log("DATA: ",data)
+      console.log("DATA: ",jsonObj)
       res.json(jsonObj);
     } catch (error) {
       console.error('Error loading events:', error);
