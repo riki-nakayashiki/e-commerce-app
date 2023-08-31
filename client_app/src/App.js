@@ -1,4 +1,6 @@
+import './style/styles.css'
 import ItemList from "./components/item-list/ItemList.jsx";
+import Cart from "./components/Cart.jsx";
 import TempComp from "./components/TempComp.jsx";
 import {Routes, Route} from 'react-router-dom';
 
@@ -13,8 +15,8 @@ function App() {
             </header>
 
             {/* item-list */}
-            <section className="item-list">
-                <ItemList />
+            <section>
+                {/* <ItemList /> */}
             </section>
 
             {/* <TempComp /> */}

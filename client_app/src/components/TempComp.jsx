@@ -25,13 +25,15 @@ export default function PersonList() {
   //   .then((data) => setData(data));
   // }, []);
 
-  console.log(dataArr);
+  if(dataArr.length > 0) {
+    console.log(dataArr[1].productName);
+  }
 
   return (
     <ul>
       {
         dataArr.map((data) =>
-            {return <li key={data.username}>{data.username}</li>}
+            {return <li key={data.productName}>{data.productName}</li>}
         )
       }
     </ul>
