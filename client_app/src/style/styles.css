@@ -1,4 +1,15 @@
+.item-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2vw;
+}
+
 .item-list {
+  display: flex;
+  flex-direction: column;
+}
+.item-list .item-cards {
   padding: 1vw;
   display: flex;
   flex-direction: row;
@@ -36,6 +47,14 @@
 .item-list .item-card .item-name {
   font-weight: 600;
 }
+
+.item-list .pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 5vw;
+}
+
 * {
   margin: 0;
   padding: 0;
