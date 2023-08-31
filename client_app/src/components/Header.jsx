@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 import Cart from "./Cart.jsx";
-import '../style/Header.css';
+// import '../style/Header.css';
 
 const Header = () => {
   const [isCart, setCart] = useState(false);
