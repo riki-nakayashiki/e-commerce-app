@@ -1,0 +1,98 @@
+@mixin FlexRow($colGap: 0vh) {
+    display: flex;
+    column-gap: $colGap;
+}
+ 
+@mixin FlexColumn($rowGap: 0vh) {
+    display: flex;
+    flex-direction: column;
+    row-gap: $rowGap;
+}
+
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$color1: #272829; 
+$color2: #61677A; 
+$color3: #D8D9DA; 
+$color4: #FFF6E0; 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.cart {
+    width: 500px;
+    @include FlexColumn(30px);
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #f5f5f5;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        position: relative;
+    }
+
+    figure {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        border: 1px solid black;
+    }
+
+    .cart-quantity {
+        @include FlexRow(10px);
+        align-items: center;
+    }
+
+    input {
+        background-color: transparent;
+        border: none;
+        border: 1px solid $color3;
+        width: 100px;
+        padding: 10px;
+    }
+
+    #changeQuantity {
+        border: none;
+        background-color: $color2;
+        color: white;
+        padding: 10px;
+    }
+
+    #deleteItem {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 0.3em;
+    }
+}
