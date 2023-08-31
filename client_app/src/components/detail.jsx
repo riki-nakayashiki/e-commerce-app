@@ -3,7 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
-import Header from "./Header.jsx";
+/* import Header from "./Header.jsx"; */
 import Footer from "./Footer.jsx";
 
 export default function Detail(){
@@ -28,7 +28,7 @@ export default function Detail(){
 if (jsonObj.length > 0) {
     return(
         <div>
-            <Header/>
+            {/* <Header/> */}
             <div className='detail'>
                 <div className='product-img'>
                     <img src={jsonObj[id].image}></img>
