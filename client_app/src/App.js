@@ -1,9 +1,11 @@
 import React from 'react';
-import Header from "./components/Header.jsx";
-import Slider from './components/Slider.jsx';
+import Header from './components/Header.jsx';
+import Slider from "./components/Slider.jsx";
 import ItemList from "./components/item-list/ItemList.jsx";
+/* import Cart from "./components/Cart.jsx"; */
 import TempComp from "./components/TempComp.jsx";
-import FooterComponent from "./components/FooterComponent.jsx"; 
+import FooterComponent from "./components/FooterComponent.jsx";
+
 
 function App() {
     return (
