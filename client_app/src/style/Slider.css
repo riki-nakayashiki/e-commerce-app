@@ -1,9 +1,8 @@
-/* src/styles/Slider.css */
 .slider {
     position: relative;
     max-width: 700px;
     height: 300px;
-    margin: 0 auto;
+    margin: 25px auto;
     overflow: hidden;
     border:1px solid rgb(129, 125, 125);
     border-radius: 10px;
