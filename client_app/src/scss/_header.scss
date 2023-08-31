@@ -2,8 +2,6 @@
 
 .header {
     --header: 80px;
-    // background-color: $color1;
-    // color: white;
     height: var(--header);
     border-bottom: 1px solid $color1;
   }
@@ -49,28 +47,3 @@
   .nav-links li span {
     font-size: 1rem;
   }
-  
-  /* media  */
-  
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 0 1rem;
-    }
-  
-    .nav-links {
-      gap: 1rem;
-    }
-  
-    .logo {
-      font-size: 1.25rem;
-    }
-  
-    .nav-links li a {
-      font-size: 0.9rem;
-    }
-  
-    .nav-links li span {
-      font-size: 1rem;
-    }
-  }
-  

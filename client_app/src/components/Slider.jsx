@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 // import '../style/Slider.css';
 import img1 from '../images/img-1.jpg';
 import img2 from '../images/img-2.jpg';
+import img3 from '../images/img-3.jpg';
+import img4 from '../images/img-4.jpg';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [img1, img2, img1, img2];
+  const images = [img1, img2, img3, img4];
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
