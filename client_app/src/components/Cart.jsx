@@ -28,8 +28,8 @@ export default function Cart() {
     }
 
     const deleteItem = (data) => {
-        console.log(dataArr.indexOf(data))
-        // console.log(data)
+        // console.log(dataArr.indexOf(data))
+        console.log(data)
 
         // axios.delete("http://localhost:8081/cart", data)
         //     .then(res => {
@@ -37,33 +37,24 @@ export default function Cart() {
         //         console.log(res.data);
         //     })
 
-        const newEvent = {
-            id: data.productId,
-            eventday: "showDate",
-            detail: data.productId
-        }
-
         fetch('http://localhost:8081/cart', {
-        method: 'POST',
+        method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(newEvent),
+        body: JSON.stringify(data),
         })
         .then(response => {
         console.log("response", response);
-        if (!response.ok) {
-            throw new Error('EVENT response was not ok');
-        }
-        return response.json();
         })
         .then(data => {
         console.log("Check Data",data);
         })
         .catch(error => {
-        // console.error('Error adding todo:', error);
+        console.error('Error adding todo:', error);
         });
 
+        window.location.reload()
     }
             
     return (

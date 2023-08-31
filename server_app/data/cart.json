@@ -1,1 +1,4 @@
-[{"productId":"1607","gender":"Men","category":"Bottomwear","type":"Track Pants","baseColor":"Blue","productName":"Reebok Men trackpant- male Track Pants","price":"90","size":"L","userId":"359","image":"http://assets.myntassets.com/v1/images/style/properties/b9828d5eb23f75d6cb4ba5a66f292b83_images.jpg"},{"productId":"9999","gender":"Men","category":"Bottomwear","type":"Track Pants","baseColor":"Blue","productName":"Test Data","price":"80","size":"L","userId":"359","image":"http://assets.myntassets.com/v1/images/style/properties/63f84251c145288df7baec1081432173_images.jpg"}]
+[
+    {"productId":"1607","gender":"Men","category":"Bottomwear","type":"Track Pants","baseColor":"Blue","productName":"Reebok Men trackpant- male Track Pants","price":"90","size":"L","userId":"359","image":"http://assets.myntassets.com/v1/images/style/properties/b9828d5eb23f75d6cb4ba5a66f292b83_images.jpg"},
+    {"productId":"9999","gender":"Men","category":"Bottomwear","type":"Track Pants","baseColor":"Blue","productName":"Test Data","price":"80","size":"L","userId":"359","image":"http://assets.myntassets.com/v1/images/style/properties/63f84251c145288df7baec1081432173_images.jpg"}
+]
