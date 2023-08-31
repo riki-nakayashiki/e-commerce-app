@@ -21,8 +21,8 @@ export default function ItemList(props) {
   return (
     <section className="item-list">
       <section className="item-cards">
-        {itemListForPagination[countPage].map((item, i) => {
-          return <ItemCard key={item.productId} item={item} dataId={i}/>;
+        {itemListForPagination[countPage].map((item) => {
+          return <ItemCard key={item.productId} item={item} dataId={item.productId}/>;
         })}
       </section>
       <section className="pagination">
