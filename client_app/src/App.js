@@ -2,7 +2,6 @@ import Header  from './components/Header.jsx';
 import Slider from './components/Slider.jsx';
 import './style/styles.css'
 import {Routes, Route} from 'react-router-dom';
-
 import Home from './components/home.jsx';
 import Detail from './components/detail.jsx';
 import Footer from './components/Footer.jsx';

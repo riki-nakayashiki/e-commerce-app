@@ -1,26 +1,22 @@
 import '../style/styles.css'
-import ItemList from "../components/item-list/ItemList.jsx";
-import Cart from "../components/Cart.jsx";
-import TempComp from "../components/TempComp.jsx";
+import Header from "./Header.jsx";
+import Footer from "./FooterComponent.jsx";
+import Items from './item-list/Items.jsx';
 
 export default function Home() {
     return (
     <main>
         {/* HEADER */}
-        <header>
-            HEADER
-        </header>
+        <Header/>
 
         {/* item-list */}
         <section>
-            <ItemList />
+            <Items />
         </section>
 
         {/* <TempComp /> */}
            {/* FOOTER */}
-           <footer>
-                FOOTER
-            </footer>
+           <Footer/>
         </main>
     );
   }
