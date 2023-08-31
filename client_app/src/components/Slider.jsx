@@ -5,7 +5,7 @@ import img2 from '../images/img-2.jpg';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [img1, img2];
+  const images = [img1, img2, img1, img2];
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);

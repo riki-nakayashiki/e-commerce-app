@@ -1,7 +1,7 @@
 /* MAIN LIST STYLE */
 
 .items {
-    padding: 0 5%;
+    padding: 0 6%;
 }
 
 .item-filter {
@@ -15,6 +15,14 @@
         // border: 1px solid $color3;
         background-color: transparent;
         outline: none;
+        text-transform: uppercase;
+        font-size: .9em;
+        letter-spacing: 2px;
+        // font-weight: 700;
+    }
+
+    select:hover, select:focus {
+        color: $color2;
     }
 }
 
@@ -31,21 +39,22 @@
 
     .item-card {
         background-color: white;
-        // box-shadow: 0 10px 20px -10px rgba(0,0,0,0.1);
+        box-shadow: 0 16px 10px -10px rgba(0,0,0,0.1);
         // border-radius: 10px;
         border: 1px solid $color1;
 
         figure {
             @include FlexColumn(1vw);
             align-items: center;
+            // margin: 0;
         }
 
         figcaption {
             width: 100%;
             @include FlexRow(4px);
             flex-wrap: wrap;
-            justify-content: center;
-            padding: 7%;
+            // justify-content: center;
+            padding: 2% 7%;
             row-gap: 10px;
         }
 
@@ -57,26 +66,37 @@
         }
 
         .item-category, .item-gender {
-            border-radius: 10vw;
+            // border-radius: 10vw;
             padding: 3px 10px;
             width: fit-content;
-            background-color: $color1;
+            background-color: $color2;
             color: white;
-            font-size: .8em;
+            font-size: .7em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .item-name {
             font-weight: 500;
             width: 100%;
             font-size: 1.3em;
-            text-align: center;
+            // text-align: center;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
         }
 
         .btn-primary {
-            width: 90%;
+            width: 96%;
+            background-color: white;
+            border: none;
+            color: $colorPoint;
+            text-align: right;
+            font-size: 1em;
+        }
+
+        .btn-primary::before {
+            content: ">> ";
         }
 
     }

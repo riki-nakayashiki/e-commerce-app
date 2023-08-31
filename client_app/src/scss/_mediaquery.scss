@@ -1,0 +1,57 @@
+/* media  */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .nav-links li a {
+        text-indent: -9999px;
+    }
+
+    .nav-links li span {
+        text-indent: 0;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .slider-img {
+        width: 200%;
+        object-fit: contain;
+        // object-position: -100px -100px;
+        margin: 0;
+    }
+
+    .item-list {
+        .item-cards {
+            grid-template-columns:repeat(2,48%);
+            row-gap: 3vh;
+        }
+
+        .item-card {
+            img {
+                height: 140px;
+            }
+        }
+    }
+
+    .icon {
+        font-size: 1rem; 
+    }
+
+    .footer p {
+        font-size: 0.8rem; 
+    }
+
+    .detail {
+        flex-direction: column;
+    }
+
+    .cart {
+        width: 100vw;
+        --cartImg: 100px;
+    }
+}
