@@ -47,6 +47,7 @@
 .item-list .item-card .item-name {
   font-weight: 600;
 }
+
 .item-list .pagination {
   display: flex;
   flex-direction: row;

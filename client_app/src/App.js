@@ -1,30 +1,26 @@
 import './style/styles.css'
-import Items from './components/item-list/Items.jsx';
-import Cart from "./components/Cart.jsx";
-import TempComp from "./components/TempComp.jsx";
+import {Routes, Route} from 'react-router-dom';
+
+import Home from './components/home.jsx';
+import Detail from './components/detail.jsx';
 
 function App() {
     return (
-        <main>
-            {/* HEADER */}
-            <header>
-                HEADER
-            </header>
-
-            {/* item-list */}
-            <section>
-                <Items />
-            </section>
-
-            {/* <Cart /> */}
-            {/* <TempComp /> */}
-
-            {/* FOOTER */}
-            <footer>
-                FOOTER
-            </footer>
-        </main>
+            <Routes>
+                <Route path="/" element={<Home/>}></Route>
+                <Route path="/detail/:id" element={<Detail/>}></Route>
+            </Routes>
     );
 }
+// function App() {
+//     return (
+//       <div className="App">
+//         <Routes>
+//             <Route path='/detail' element={<Detail />}></Route>
+//         </Routes>
+
+//       </div>
+//     );
+//   }
 
 export default App;
