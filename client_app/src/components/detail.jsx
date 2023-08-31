@@ -45,22 +45,25 @@ export default function Detail(){
         alert("ADDED!")
     }
 
+    let result = jsonObj.find(item => item.productId === id)
+    console.log(result)
+
 if (jsonObj.length > 0) {
     return(
         <div>
             <Header/>
             <div className='detail'>
                 <div className='product-img'>
-                    <img src={jsonObj[id].image}></img>
+                    <img src={result.image}></img>
                 </div>
                 <div className='product-detail'>
-                    <small>{jsonObj[id].category}</small>
-                    <h2>{jsonObj[id].productName}</h2>
-                    <p>TYPE : {jsonObj[id].type}</p>
-                    <p >PRICE : ${jsonObj[id].price}</p>
-                    <p>COLOR : {jsonObj[id].baseColor}</p>
+                    <small>{result.category}</small>
+                    <h2>{result.productName}</h2>
+                    <p>TYPE : {result.type}</p>
+                    <p >PRICE : ${result.price}</p>
+                    <p>COLOR : {result.baseColor}</p>
 
-                    <button onClick={() => addItem(jsonObj[id])}>Add to Cart</button>
+                    <button onClick={() => addItem(result)}>Add to Cart</button>
                 </div>
              </div>
              <Footer/>
