@@ -3,8 +3,9 @@ import Header from "./Header.jsx";
 import ItemList from "./item-list/ItemList.jsx";
 import Footer from "./FooterComponent.jsx";
 
-import Cart from "./Cart.jsx";
-import TempComp from "./TempComp.jsx";
+import Items from './item-list/Items.jsx';
+import Cart from "../components/Cart.jsx";
+import TempComp from "../components/TempComp.jsx";
 
 export default function Home() {
     return (
@@ -16,7 +17,7 @@ export default function Home() {
 
         {/* item-list */}
         <section>
-            <ItemList />
+            <Items />
         </section>
 
         {/* <TempComp /> */}

@@ -2,11 +2,12 @@ export default function ItemCard(props) {
   return (
     <section className="item-card">
       <figure>
-        <img src={props.item[9]} alt="pic" />
+        <img src={props.item.image} alt="pic" />
         <figcaption>
-          <div className="item-category">{props.item[2]}</div>
-          <div className="item-name">{props.item[5]}</div>
-          <div className="item-price">${props.item[6]}</div>
+          <div className="item-category">{props.item.category}</div>
+          <div className="item-gender">#{props.item.gender}</div>
+          <div className="item-name">{props.item.productName}</div>
+          <div className="item-price">${props.item.price}</div>
         </figcaption>
         <a href={`/detail/${props.dataId}`} className="btn btn-primary">
           See detail
