@@ -50,7 +50,6 @@ export default function Cart() {
             
     return (
         <section className="cart">
-            <h3>CART</h3>
             <ul>
                 {
                     dataArr.map((data) =>
@@ -58,8 +57,10 @@ export default function Cart() {
                             <figure>
                                 <img src={data.image} alt={data.productName} />
                                 <figcaption>
-                                    <p>{data.productName}</p>
-                                    <p>$ {data.price}</p>
+                                    <div>
+                                        <p>{data.productName}</p>
+                                        <span>$ {data.price}</span>
+                                    </div>
                                     <div className='cart-quantity'>
                                         <label htmlFor="quantity">quantity</label>
                                         <input type="number" name="quantity" id="quantity" defaultValue="1" />
@@ -72,7 +73,8 @@ export default function Cart() {
                     )
                 }
             </ul>
-            <p>TOTAL: $ {totalPrice}</p>
+            <p><span>TOTAL</span> $ {totalPrice}</p>
+            <button className='btn btn-primary'>Checkout</button>
       </section>
     );
 }

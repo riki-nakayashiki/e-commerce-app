@@ -1,4 +1,4 @@
-.header {
+/* .header {
   background-color: #333;
   color: white;
   padding: 1rem 0;
@@ -41,11 +41,11 @@
 
 .nav-links li span {
   font-size: 1.25rem;
-}
+} */
 
 /* media  */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar {
     padding: 0 1rem;
   }
@@ -65,4 +65,4 @@
   .nav-links li span {
     font-size: 1rem;
   }
-}
+} */
