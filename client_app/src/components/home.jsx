@@ -1,15 +1,18 @@
 import '../style/styles.css'
-import ItemList from "../components/item-list/ItemList.jsx";
-import Cart from "../components/Cart.jsx";
-import TempComp from "../components/TempComp.jsx";
+import Header from "./Header.jsx";
+import ItemList from "./item-list/ItemList.jsx";
+import Footer from "./FooterComponent.jsx";
+
+import Cart from "./Cart.jsx";
+import TempComp from "./TempComp.jsx";
 
 export default function Home() {
     return (
     <main>
         {/* HEADER */}
-        <header>
-            HEADER
-        </header>
+        <Header />
+
+        {/* SLIDER */}
 
         {/* item-list */}
         <section>
@@ -17,10 +20,9 @@ export default function Home() {
         </section>
 
         {/* <TempComp /> */}
-           {/* FOOTER */}
-           <footer>
-                FOOTER
-            </footer>
+
+        {/* FOOTER */}
+            <Footer/>
         </main>
     );
   }
