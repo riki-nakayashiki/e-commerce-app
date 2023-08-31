@@ -26,7 +26,16 @@
   height: 20vw;
   object-fit: contain;
 }
-
+.item-list .item-card .item-category {
+  border-radius: 3px;
+  padding: 3px;
+  width: fit-content;
+  background-color: #61677A;
+  color: white;
+}
+.item-list .item-card .item-name {
+  font-weight: 600;
+}
 * {
   margin: 0;
   padding: 0;

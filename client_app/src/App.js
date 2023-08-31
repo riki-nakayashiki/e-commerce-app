@@ -1,28 +1,26 @@
-import './style/styles.css'
+import React from 'react';
+import Header from './components/Header.jsx';
+import Slider from "./components/Slider.jsx";
 import ItemList from "./components/item-list/ItemList.jsx";
-import Cart from "./components/Cart.jsx";
+/* import Cart from "./components/Cart.jsx"; */
 import TempComp from "./components/TempComp.jsx";
+import FooterComponent from "./components/FooterComponent.jsx";
+
 
 function App() {
     return (
         <main>
             {/* HEADER */}
-            <header>
-                HEADER
-            </header>
-
+            <Header /> 
+            { /* Slider */}
+            <Slider />
             {/* item-list */}
             <section>
-                {/* <ItemList /> */}
+                <ItemList />
             </section>
-
-            {/* <Cart /> */}
             <TempComp />
-
             {/* FOOTER */}
-            <footer>
-                FOOTER
-            </footer>
+            <FooterComponent /> 
         </main>
     );
 }

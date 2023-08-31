@@ -10,7 +10,7 @@ export default function PersonList() {
   useEffect(() => {
     axios.get("http://localhost:8081/data")
         .then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             setData(response.data)
           })
           .catch(function (error) {
