@@ -1,34 +1,16 @@
 import './style/styles.css'
-import ItemList from "./components/item-list/ItemList.jsx";
-import Cart from "./components/Cart.jsx";
-import TempComp from "./components/TempComp.jsx";
 import {Routes, Route} from 'react-router-dom';
 
+import Home from './components/home.jsx';
 import Detail from './components/detail.jsx';
 
 function App() {
     return (
-        <main>
-            {/* HEADER */}
-            <header>
-                HEADER
-            </header>
-
-            {/* item-list */}
-            <section>
-                {/* <ItemList /> */}
-            </section>
-
-            {/* <TempComp /> */}
-
             <Routes>
+                <Route path="/" element={<Home/>}></Route>
                 <Route path="/detail/:id" element={<Detail/>}></Route>
             </Routes>
-            {/* FOOTER */}
-            <footer>
-                FOOTER
-            </footer>
-        </main>
+         
     );
 }
 // function App() {
@@ -42,4 +24,4 @@ function App() {
 //     );
 //   }
 
-export default App;``
+export default App;
