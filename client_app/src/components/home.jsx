@@ -1,5 +1,9 @@
 import '../style/styles.css'
-import ItemList from "../components/item-list/ItemList.jsx";
+import Header from "./Header.jsx";
+import ItemList from "./item-list/ItemList.jsx";
+import Footer from "./FooterComponent.jsx";
+
+import Items from './item-list/Items.jsx';
 import Cart from "../components/Cart.jsx";
 import Header from "./Header.jsx";
 import Footer from "./FooterComponent.jsx";
@@ -13,7 +17,7 @@ export default function Home() {
 
         {/* item-list */}
         <section>
-            <ItemList />
+            <Items />
         </section>
 
         {/* <TempComp /> */}
