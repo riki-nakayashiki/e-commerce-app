@@ -26,7 +26,7 @@ export default function PersonList() {
   // }, []);
 
   if(dataArr.length > 0) {
-    console.log(dataArr[1].productName);
+    console.log(dataArr);
   }
 
   return (

@@ -15,6 +15,12 @@ app.use(cors({
     origin: 'http://localhost:8080'
 }));
 
+app.options('/', (req,res) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+    res.header('Access-Control-Allow-Methods', 'GET, POST');
+    res.sendStatus(200);
+});
+
 
 // Read CSV file
 async function readCsvFile(file) {
@@ -58,7 +64,7 @@ app.get('/data', async (req, res) => {
             jsonObj.push(obj);
         }
         JSON.stringify(jsonObj);
-      console.log("DATA: ",jsonObj)
+    //   console.log("DATA: ",jsonObj)
       res.json(jsonObj);
     } catch (error) {
       console.error('Error loading events:', error);
@@ -72,6 +78,22 @@ app.get('/cart', async (req, res) => {
       const jsonData = await fs.promises.readFile('./data/cart.json');
       const data = JSON.parse(jsonData);
       res.json(data);
+    } catch (error) {
+      console.error('Error loading events:', error);
+    }
+});
+
+app.post('/cart', async (req, res) => {
+    const newItem = req.body;
+    try {
+        console.log("CHECK RESPONSE--------------------: ",newItem)
+        const jsonData = await fs.promises.readFile('./data/cart.json');
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+        const data = JSON.parse(jsonData);
+        data.push(newItem)
+        // data.splice(0, 1)
+        await fs.promises.writeFile('./data/cart.json', JSON.stringify(data));
+        res.json(newItem);
     } catch (error) {
       console.error('Error loading events:', error);
     }
