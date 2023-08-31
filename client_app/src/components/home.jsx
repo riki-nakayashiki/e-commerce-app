@@ -1,7 +1,6 @@
 import '../style/styles.css'
 import Header from "./Header.jsx";
 import Footer from "./FooterComponent.jsx";
-
 import Items from './item-list/Items.jsx';
 
 export default function Home() {
