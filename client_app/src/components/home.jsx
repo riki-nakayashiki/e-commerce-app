@@ -4,7 +4,6 @@ import ItemList from "./item-list/ItemList.jsx";
 import Footer from "./FooterComponent.jsx";
 
 import Items from './item-list/Items.jsx';
-import Cart from "../components/Cart.jsx";
 import Header from "./Header.jsx";
 import Footer from "./FooterComponent.jsx";
 import TempComp from "../components/TempComp.jsx";
