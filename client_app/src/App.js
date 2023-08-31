@@ -10,7 +10,6 @@ function App() {
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/detail/:id" element={<Detail/>}></Route>
             </Routes>
-         
     );
 }
 // function App() {
