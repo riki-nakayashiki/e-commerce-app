@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "./components/Header.jsx";
 import ItemList from "./components/item-list/ItemList.jsx";
 import TempComp from "./components/TempComp.jsx";
-import FooterComponent from "./components/FooterComponent"; 
+import FooterComponent from "./components/FooterComponent.jsx"; 
 
 function App() {
     return (
