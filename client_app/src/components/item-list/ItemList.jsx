@@ -20,9 +20,9 @@ export default function ItemList() {
 
   return (
     <section className="item-list">
-      {itemList.map((item) => {
+      {itemList.map((item,i) => {
         if (item[0] !== "productId") {
-          return <ItemCard key={item[0]} item={item} />;
+          return <ItemCard key={item[0]} item={item} dataId={i}/>;
         }
       })}
     </section>

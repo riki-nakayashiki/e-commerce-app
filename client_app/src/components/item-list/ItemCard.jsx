@@ -8,7 +8,7 @@ export default function ItemCard(props) {
           <div className="item-name">{props.item[5]}</div>
           <div className="item-price">${props.item[6]}</div>
         </figcaption>
-        <a href="#" className="btn btn-primary">
+        <a href={`/detail/${props.dataId}`} className="btn btn-primary">
           See detail
         </a>
       </figure>
