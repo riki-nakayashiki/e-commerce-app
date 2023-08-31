@@ -66,6 +66,7 @@ app.get('/data', async (req, res) => {
             obj[data[0][j]] = data[i][j];
             }
             jsonObj.push(obj);
+            console.log(obj);
         }
         JSON.stringify(jsonObj);
     //   console.log("DATA: ",jsonObj)
