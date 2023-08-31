@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 export default function Cart() {
     const [dataArr, setData] = useState([{image: "", price: 0}]);
 
+    // GET cart data
     useEffect(() => {
         axios.get("http://localhost:8081/cart")
             .then(function (response) {
@@ -15,6 +16,7 @@ export default function Cart() {
               })
     }, []);
             
+    // calculate total price
     let totalPrice; 
     if(dataArr.length > 0) {
         const priceArr = []
@@ -26,6 +28,7 @@ export default function Cart() {
         })
     }
 
+    // DELETE item
     const deleteItem = (data) => {
 
         fetch('http://localhost:8081/cart', {

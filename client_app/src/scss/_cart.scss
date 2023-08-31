@@ -50,6 +50,7 @@
 
     span {
         font-weight: 700;
+        color: $colorPoint;
     }
 
     .cart-quantity {
@@ -59,21 +60,24 @@
 
     label {
         width: 100%;
-        color: $color2;
+        color: $color3;
     }
 
     input {
-        background-color: $color3;
+        background-color: transparent;
+        color: white;
+        text-align: right;
         border: none;
+        border: 1px solid $color3;
+        border-right: none;
         margin-left: 20px;
-        // border: 1px solid $color3;
-        width: 100px;
+        width: 100%;
         padding: 10px;
     }
 
     #changeQuantity {
         border: none;
-        background-color: $color2;
+        border: 1px solid $color3;
         color: $color3;
         padding: 10px;
     }
@@ -89,19 +93,24 @@
     }
 
     &>p {
-        font-size: 1.3em;
+        font-size: 1.5em;
         text-align: right;
-        border-top: 1px solid white;
+        border-top: 1px solid $color3;
         padding: 2%;
+        color: $colorPoint;
+        font-weight: 800;
 
         span {
-            color: $color2;
             margin-right: 20px;
+            font-weight: 300;
+            font-size: .8em;
         }
     }
 
     &>button {
-        // background-color: white;
         padding: 4%;
+        border-radius: 0;
+        background-color: white;
+        color: initial;
     }
 }

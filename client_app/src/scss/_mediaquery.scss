@@ -1,4 +1,4 @@
-/* media  */
+/* MOBILE VIEWPORT */
 
 @media (max-width: 768px) {
 
@@ -6,11 +6,25 @@
         font-size: 14px;
     }
 
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
     .nav-links li a {
+        font-size: 0.9rem;
         text-indent: -9999px;
     }
 
     .nav-links li span {
+        font-size: 1rem;
         text-indent: 0;
     }
 
@@ -21,7 +35,6 @@
     .slider-img {
         width: 200%;
         object-fit: contain;
-        // object-position: -100px -100px;
         margin: 0;
     }
 
@@ -48,10 +61,16 @@
 
     .detail {
         flex-direction: column;
+        height: auto;
+
+        .product-img, .product-detail {
+            width: 100%;
+        }
     }
 
     .cart {
         width: 100vw;
         --cartImg: 100px;
+        padding: 8%;
     }
 }
