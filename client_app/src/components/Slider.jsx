@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
+// src/components/Slider.jsx
+import React, { useState } from 'react';
 import '../style/Slider.css';
+import img1 from '../images/img-1.jpg';
+import img2 from '../images/img-2.jpg';
 
 const Slider = () => {
-  const [images, setImages] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [img1, img2]; // Add more image paths here
 
-  useEffect(() => {
-    const fetchedImages = [
-      '/images/img-1.jpg',
-      '/images/img-2.jpg'
-    ];
-    setImages(fetchedImages);
-  }, []);
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  };
 
-  const renderSliderItems = () => {
-    return images.map((image, index) => (
-      <div className="slider-item" key={index}>
-        <img src={process.env.PUBLIC_URL + image} alt={`Slider ${index}`} />
-      </div>
-    ));
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
   };
 
   return (
     <div className="slider">
-      <div className="slider-container">
-        {renderSliderItems()}
-      </div>
+      <button className="slider-btn prev-btn" onClick={prevSlide}>
+        &lt;
+      </button>
+      <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} className="slider-img" />
+      <button className="slider-btn next-btn" onClick={nextSlide}>
+        &gt;
+      </button>
     </div>
   );
 };

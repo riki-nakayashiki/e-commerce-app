@@ -7,6 +7,9 @@ import TempComp from "./components/TempComp.jsx";
 import FooterComponent from "./components/FooterComponent.jsx";
 
 
+   
+
+
 function App() {
     return (
         <main>
