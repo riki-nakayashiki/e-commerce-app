@@ -1,5 +1,5 @@
 import './style/styles.css'
-import ItemList from "./components/item-list/ItemList.jsx";
+import Items from './components/item-list/Items.jsx';
 import Cart from "./components/Cart.jsx";
 import TempComp from "./components/TempComp.jsx";
 
@@ -13,11 +13,11 @@ function App() {
 
             {/* item-list */}
             <section>
-                {/* <ItemList /> */}
+                <Items />
             </section>
 
             {/* <Cart /> */}
-            <TempComp />
+            {/* <TempComp /> */}
 
             {/* FOOTER */}
             <footer>
