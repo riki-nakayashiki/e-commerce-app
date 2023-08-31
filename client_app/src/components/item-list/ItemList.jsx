@@ -37,29 +37,6 @@ export default function ItemList(props) {
   );
 }
 
-// setCountPage(1);
-// console.log(countPage);
-
-// function makePaginateList(itemList) {
-//   let itemListForPaginate = [];
-//   let itemObjForPaginate = [];
-//   let countPage = 0;
-//   // console.log(itemList);
-//   itemList.map((item) => {
-//     itemObjForPaginate.push(item);
-//     countPage++;
-//     console.log(itemObjForPaginate);
-//     if (countPage == 3) {
-//       countPage = 0;
-//       itemListForPaginate.push(itemObjForPaginate);
-//       itemObjForPaginate = [];
-//     }
-//   });
-//   console.log(itemListForPaginate);
-
-//   return itemListForPaginate;
-// }
-
 function sliceByNumber(array, number) {
   const length = Math.ceil(array.length / number);
   return new Array(length)
