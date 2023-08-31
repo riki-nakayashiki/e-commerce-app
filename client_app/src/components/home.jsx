@@ -1,6 +1,7 @@
 import '../style/styles.css'
 import Header from "./Header.jsx";
-import Footer from "./FooterComponent.jsx";
+import Slider from './Slider.jsx';
+import Footer from "./Footer.jsx";
 import Items from './item-list/Items.jsx';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <main>
         {/* HEADER */}
         <Header/>
+        <Slider/>
 
         {/* item-list */}
         <section>
