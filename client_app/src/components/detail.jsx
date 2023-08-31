@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
-import Cart from "./Cart.jsx";
 
 export default function Detail(){
     const [jsonObj, setData] = useState([]);
@@ -48,21 +47,25 @@ export default function Detail(){
 
 if (jsonObj.length > 0) {
     return(
+        <div>
+            <Header/>
+            <div className='detail'>
+                <div className='product-img'>
+                    <img src={jsonObj[id].image}></img>
+                </div>
+                <div className='product-detail'>
+                    <small>{jsonObj[id].category}</small>
+                    <h2>{jsonObj[id].productName}</h2>
+                    <p>TYPE : {jsonObj[id].type}</p>
+                    <p >PRICE : ${jsonObj[id].price}</p>
+                    <p>COLOR : {jsonObj[id].baseColor}</p>
 
-        <div className='detail'>
-            <div className='product-img'>
-                <img src={jsonObj[id].image}></img>
-            </div>
-            <div className='product-detail'>
-                <small>{jsonObj[id].category}</small>
-                <h2>{jsonObj[id].productName}</h2>
-                <p>TYPE : {jsonObj[id].type}</p>
-                <p >PRICE : ${jsonObj[id].price}</p>
-                <p>COLOR : {jsonObj[id].baseColor}</p>
-
-                <button onClick={() => addItem(jsonObj[id])}>Add to Cart</button>
-            </div>
+                    <button onClick={() => addItem(jsonObj[id])}>Add to Cart</button>
+                </div>
+             </div>
+             <Footer/>
         </div>
+
     )
 }
 

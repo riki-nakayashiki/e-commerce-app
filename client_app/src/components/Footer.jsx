@@ -4,7 +4,7 @@ import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg
 import '../style/Footer.css';
 
 
-const FooterComponent = () => {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="social-icons">
@@ -23,4 +23,4 @@ const FooterComponent = () => {
   );
 };
 
-export default FooterComponent;
+export default Footer;
