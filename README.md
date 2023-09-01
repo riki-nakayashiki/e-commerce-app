@@ -1,3 +1,12 @@
+# Hot to start this app
+
+On client_app
+npm i
+npm start
+
+On server_app
+node index.js
+
 # e-commerce-app
 
 Project: Final Project
